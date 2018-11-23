@@ -1,0 +1,215 @@
+.page-wrapper {
+    height: 100%;
+}
+.scroll-box {
+    padding-top: 2.5rem;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    background: $light-background-color;
+}
+
+.mint-header {
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+
+
+.none-border-bottom {
+    border-bottom: none !important;
+}
+.section {
+    padding: 0 .625rem;
+    margin-bottom: .625rem;
+    background: $white-background-color;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    a {
+        color: #2c3e50;
+    }
+    .item {
+        line-height: 2.4rem;
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        justify-content: space-between;
+        .title {
+            font-size: .875rem;
+        }
+        .reload {
+            span {
+                vertical-align: middle;
+            }
+            .iconfont {
+                vertical-align: middle;
+            }
+        }
+    }
+    .head {
+        .title {
+            font-size: .875rem;
+            font-weight: bold;
+        }
+    }
+    .item:last-child {
+        border-bottom: none;
+    }
+}
+
+/*     账户信息蒙版样式 start */
+.bill-detail-mask {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    .content {
+        margin-bottom: 1rem;
+        color: $box-shadow-color;
+    }
+    .bill-content {
+        padding: .625rem;
+        text-align: left;
+    }
+    .second-label {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $white-color;
+    }
+    .inline {
+        line-height: 2rem;
+        display: flex;
+        flex-direction: row;
+            .label {
+            width: 60%;
+        }
+        .label-text, .content-text {
+            flex: 1;
+            text-align: right;
+        }
+    }
+    .content-item  {
+        line-height: 2rem;
+    }
+    .border-bottom {
+        border-bottom: 1px solid $light-white-color;
+        opacity: 0.7;
+    }
+    .title {
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: $white-color;
+    }
+    .class {
+        font-weight: 700;
+    }
+    .order-sum {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        padding: 0 .625rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $orange;
+        font-weight: 700;
+    }
+    .closed {
+        position: relative;
+        z-index: 2;
+        .iconfont {
+            color: $box-shadow-color;
+            font-size: 3rem !important;
+            font-weight: normal;
+        }
+    }
+}
+.mask-header {
+    z-index: 2;
+}
+.bill-content, .order-sum {
+    position: relative;
+    z-index: 2;
+    color: $white-color;
+}
+.mask {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.bgFilter {
+    // filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    -webkit-filter: blur(2px); /* Chrome, Opera */
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);    
+        filter: blur(2px);
+}
+/*     账户信息蒙版样式 end */
+
+.clear-float::after {
+    content: '';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    color: transparent;
+    clear: both;
+}
+
+
+/* 信息加载 */
+.more-loading {
+    line-height: 4rem;
+    background-color: white;
+}
+
+/* .swiper */
+.swiper-wrapper {
+    justify-content: flex-start;
+}
+
+/* 优惠政策标签颜色 */
+.maimian {
+    background-color: $red;
+}
+.lijian {
+    background-color: $orange;
+}
+.zaoniao {
+    background-color: $purple;
+}
+.zaixianyouhui {
+    background-color: $green-dark;
+}
+.superzaoniao {
+    background-color: $green;
+}
+.youhuiquan {
+    background-color: $blue;
+}
+.jifen {
+    background-color: $light-blue;
+}
+
+.home-page, .line-list-page, .line-detail {
+    .mdDevice{
+        width: 768px !important;
+        box-sizing: border-box;
+    }
+}
+
+
+
+/* 回到顶部公共组件样式 */
+.bottom-bar-component {
+    position: fixed;
+    bottom: 1.3rem;
+    right: 0;
+    margin-right: .625rem;
+    text-align: right;
+    .iconfont {
+        font-size: 2rem;
+        color: rgba(0, 0, 0, 0.6);
+    }
+}

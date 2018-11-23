@@ -1,0 +1,31 @@
+.price-package-page  {
+    .tab {
+        margin-bottom: 1rem;
+        line-height: 2.4rem;
+        background-color: $white-background-color;
+        .item {
+            width: 6rem;
+            float: left;
+            font: 1rem normal;
+            line-height: 2.4rem;
+        }
+        .selected {
+            border-bottom: 2px solid $blue;
+        }
+    }
+    .section {
+        .item:last-child {
+            border-bottom: none;
+        }
+    }
+    .button-wrapper {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        line-height: 2.4rem;
+        .mint-button {
+            text-align: center;
+        }
+    }
+    
+}

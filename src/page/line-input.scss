@@ -1,0 +1,135 @@
+.line-input-page  {
+    .mission-period {
+        .list {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid $border-color;
+        }
+        .period-item {
+            width: 6rem;
+            padding: 0.4rem 0;
+            display: flex;
+            flex-direction: column;
+            .title, .price, .tab {
+                width: 3.75rem;
+            }
+        }
+        .tab {
+            margin-bottom: 0.4rem;
+            width: 3.75rem;
+            height: 1.5rem;
+            font: .875rem normal;
+            color: $black-text-color;
+            background-color: $light-background-color;
+            line-height: 1.5rem;
+            border-radius: .75rem;
+        }
+        .title {
+            font-size: 1rem;
+        }
+        .selected {
+            color: $white-color;
+            background-color: $blue;
+        }
+        .price {
+            color: $orange;
+        }
+    }
+    .period-content {
+        .reload {
+            color: $blue;
+        }
+    }
+    .choice-list {
+        a {
+            color: $body-text-color;
+        }
+        .num-count {
+            .count {
+                margin: .45rem 0;
+            }
+        }
+        .big-num {
+            font: 1rem bold;
+            line-height: 2.6rem;
+            margin-right: 0.8rem;
+            color: $orange;
+        }
+        .big-num, .count {
+            float: left;
+        }
+        .count {
+            display: flex;
+            float: left;
+            justify-content: center;
+        }
+        .reduce, .current-num, .add {
+            line-height: 1.5rem;
+            width: 2rem;
+            border: 1px solid $border-color;
+        }
+        .current-num {
+            background-color: $light-blue-bag;
+        }
+        .reduce {
+            border-right: none;
+            border-radius: 40% 0 0 40%;
+        }
+        .add {
+            border-left: none;
+            border-radius: 0 40% 40% 0;
+        }
+    }
+    .recommend {
+        margin: 0 .625rem 3.4rem;
+        background-color: $light-blue-bag;
+        color: $blue;
+        font: .875rem bold;
+        line-height: 2.4rem;
+        @include clampText(1)
+    }
+    .confirm {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        line-height: 3rem;
+        border-top: 1px solid $border-color;
+        .price {
+            color: $orange;
+            width: 60%;
+            float: left;
+            background-color: $white-background-color;
+        }
+        .sum-title {
+            font: 1rem bold;
+        }
+        .tag {
+            font: 1rem bold;
+        }
+        .sum-price {
+            font: 1.2rem bold;
+        }
+        .detail {
+            color: $black-text-color;
+            font: 1rem bold;
+        }
+        .button {
+            float: left;
+            width: 40%;
+            text-align: center;
+            background-color: $blue;
+            color: $white-color;
+            font: 1rem bold;
+            a {
+                color: $white-color;
+            }
+        }
+        .button-text {
+            line-height: 3rem;
+        }
+    }
+
+}
+.scroll {
+    overflow: hidden;
+}

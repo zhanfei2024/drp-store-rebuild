@@ -1,0 +1,100 @@
+.shop-banner-component {
+    width: 100%;
+    position: relative;
+    /* 布局 */
+    .content {
+        height: 8.125rem;
+        overflow: hidden;
+    }
+    .box {
+        width: 100%;
+        height: 8.125rem;
+    }
+    .banner-pic {
+        width: 100%;
+    }
+    .box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .head {
+        display: flex;
+        flex-direction: row;
+        .shop-avatar {
+            margin:  1.25rem;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 2rem;
+            overflow: hidden;
+            @include boxshadow();
+        }
+        .avatar-pic {
+            width: 100%;
+        }
+        .info {
+            margin-top: 1.25rem;
+            flex: 1;
+            text-align:left;
+            font-size: .75rem;
+            font-weight: bold;
+            line-height: 1.2rem;
+            color: $white-color;
+        }
+    }
+    .tabs {
+        width: 100%;
+        display: table;
+        line-height: 1.8rem;
+        height: 1.8rem;
+        background: rgba(0, 0, 0, 0.36);
+        .item {
+            display: table-cell;
+            border-right: 2px solid $white-color;
+            color: $white-color;
+            font-size: .75rem;
+            vertical-align: middle;
+            a {
+                color: $white-color;
+            }
+            .iconfont {
+                vertical-align: middle;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            .text {
+                vertical-align: middle;
+            }
+        }
+        .item:last-child {
+            border-right: none;
+        }
+    }
+    /* 分享图层 */
+    .share-shop, .apply-shop {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 104;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        height: 700px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .iconfont {
+            margin: .625rem 0 0 .625rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 2rem;
+            color: red;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.store-member-page {
+    margin-top: 2.5rem;
+    padding: 0 .625rem;
+    .head {
+        border-bottom: 1px solid $border-color;
+        font-weight: bold;
+    }
+    .member-item {
+        border-bottom: 1px solid $border-color;
+        font-size: .75rem;
+    }
+    .member-item:last-child {
+        border-bottom: none;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-rows: 2rem;
+        grid-template-columns: auto 4rem 4rem 4rem;
+        line-height: 2rem;
+        .item1 {
+            text-align: center;
+        }
+    }
+}

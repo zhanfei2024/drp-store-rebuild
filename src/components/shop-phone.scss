@@ -1,0 +1,27 @@
+.shop-phone-component {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    display: flex;
+    width: 100%;
+    .phone-info {
+        padding-left: .625rem;
+        font-size: .75rem;
+        flex: 1;
+        text-align: left;
+        background-color: $dark-background-color;
+        line-height: 1.3rem;
+    }
+    .phone-button {
+        width: 8rem;
+        text-align: center;
+        line-height: 2.6rem;
+        background-color: $blue;
+        color: $white-color;
+        .text {
+            color: $white-color;
+        }
+    }
+
+}

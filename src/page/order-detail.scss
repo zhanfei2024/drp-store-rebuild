@@ -1,0 +1,153 @@
+.order-detail-page {
+    .ft {
+        border-top: 1px solid $box-shadow-color;
+        width: calc(100% - 1.25rem);
+        position: fixed;
+        bottom: 0;
+        background-color: $white-color;
+    }
+    .order-item {
+        padding: 0 0.625rem;
+        line-height: 3rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+     }
+    .contact-item-wrapper {
+        padding: 0.625rem;
+    }
+    .contact-item {
+        display: flex;
+        flex-direction: row;
+        line-height: 1.5rem;
+        height: 1.5rem;
+        .label {
+            text-align: left;
+            width: 4rem;
+        }
+    }
+    .bill-info {
+        .title {
+            font-size: .875rem;
+            font-weight: 700;
+        }
+    }
+    .order-detail-section {
+        background-color: $white-color;
+        margin-bottom: 0.625rem;
+        @include boxshadow;
+    }
+    .border-bottom {
+        border-bottom: 1px solid $light-white-color;
+    }
+
+
+
+
+    .custom-title-component {
+        padding: 0 .625rem;
+        background-color: $white-color;
+        @include boxshadow;
+        .item {
+            line-height: 3rem;
+            height: 3rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .label {
+            font-size: .875rem;
+            font-weight: 700;
+            color: $deepGray;
+            width: 80%;
+            overflow: hidden;
+            text-align: left;
+        }
+        .checked {
+            .iconfont {
+                color: transparent;
+            }
+        }
+        .titleItem {
+            margin-bottom: 0.625rem;
+        }
+        .dataItem:not(:last-child) {
+            border-bottom: 1px dotted $box-shadow-color;
+        }
+  
+     }
+    .order-mark {
+        padding: 0;
+        .titleItem {
+            margin-bottom: 0;
+            padding:  0 .625rem;
+            border-bottom: 1px dotted $box-shadow-color;
+        }
+        .titleItem:last-child {
+            border-bottom: 1px dotted transparent;
+        }
+
+        .mark-text {
+            padding: .625rem;
+            height: 8rem;
+            text-align: left;
+            overflow: hidden;
+        }
+    }
+    .tourist-list {
+        color: $lightGray;
+        .titleItem {
+            .label {
+                color: $deepGray;
+                font-weight: normal;
+            }
+            .text, .iconfont {
+                color: $deepGray;
+            }
+            margin-bottom: 0;
+            border-bottom: 1px dotted $box-shadow-color;
+        }
+        .titleItem:last-child {
+            border-bottom: 1px dotted transparent;
+        }
+    }
+
+    .bottom-pay {
+        position: fixed;
+        bottom: 0;
+        & .ft {
+            padding: 10px;
+            font-size: 1rem;
+            color: $lightGray;
+            & .price {
+                color: $orange;
+                font-size: 1.1rem;
+                font-weight: bold;
+            }
+            & .paid {
+                font-size: .8rem;
+            }
+            & .btn-pay {
+                padding: 2px 10px;
+                color: $white-color;
+                border-radius: 15px;
+                background: $orange;
+                border: none;
+                font-size: 1.1rem;
+                font-weight: bold;
+            }
+            & .btn-cancle {
+                margin-right: .625rem;
+                padding: 2px 10px;
+                color: $white-color;
+                border-radius: 15px;
+                background: $orange;
+                background: $lightGray;
+                border: none
+            }
+        }
+    }
+
+}
+

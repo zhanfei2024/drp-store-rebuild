@@ -1,0 +1,155 @@
+.shop-editer-page {
+    height: 100%;
+    /* 布局 */
+    .choice-list {
+        .head {
+            font-size: .875rem;
+        }
+        .custom-switch-height {
+            line-height: 2.4rem;
+            height: 2.4rem;
+        }
+        .price {
+            line-height: 2.4rem;
+            text-align: right;
+        }
+    }
+    .pic {
+        padding: .625rem 0 .625rem 0;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid $border-color;
+        .preview {
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .uploader {
+                position: absolute;
+                z-index: 100;
+                left: 0;
+                width: 4rem;
+                height: 4rem;
+            }
+            .img-preview {
+                position: absolute;
+                left: 0;
+                z-index: 99;
+                width: 4rem;
+            }
+            .dataCode-preview {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 99;
+                width: 4rem;
+            }
+        }
+        .info {
+            position: relative;
+            flex: 1;
+            text-align: left;
+            .title {
+                font-size: .875rem;
+            }
+            .notice {
+                position: absolute;
+                bottom: 0;
+                font-size: .75rem;
+            }
+        }
+    }
+    .pic:last-child {
+        border-bottom: none;
+    }
+    .point {
+        padding: .625rem;
+        font-size: .625rem;
+        text-align: left;
+        background: $white-color;
+        line-height: 1rem;
+    }
+    /* 店铺名称 */
+    .shop-name {
+        .input {
+            line-height: 2.375rem;
+            border-width: 0;
+            border-image-width: 0;
+        }
+    }
+    /* 店铺链接 */
+    .shop-item {
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        flex-direction: row;
+        .title {
+            width: 105px;
+            text-align: left;
+            font-size: .875rem;
+            line-height: 2.4rem;
+        }
+        .shop-link {
+            flex: 1;
+        }
+    }
+    .shop-link {
+        font-size: .75rem;
+        line-height: 38px;
+        .href {
+            float: left;
+            width: 12rem;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .copy {
+            display: block;
+            float: right;
+            margin-left: .625rem;
+            margin-top: .625rem;
+            line-height: 1rem;
+            padding: 0 .625rem;
+            border: 1px solid $border-color;
+            border-radius: 4px;
+        }
+        .input {
+            position: absolute;
+            opacity: 0;
+            left: -500px;
+        }
+    }
+    /* 二维码预览 */
+    .code-preview {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, .8);
+        .dataCode-preview {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: calc(50% - 150px);
+            left: calc(50% - 150px);
+        }
+        .closed {
+            position: absolute;
+            width: 100%;
+            bottom: .625rem;
+            .iconfont {
+                font-size: 2rem;
+                color: $white-color;
+            }
+        }
+    }
+}
+.scroll {
+    overflow: hidden;
+}

@@ -1,0 +1,16 @@
+@mixin clampText($clamp) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $clamp;
+    overflow: hidden;
+}
+
+@mixin boxshadow() {
+  box-shadow: 1px 3px 20px 0px $box-shadow-color;
+}
+
+
+@mixin margin-top($rem) {
+  margin-top: $rem
+}
+

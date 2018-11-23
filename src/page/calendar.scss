@@ -1,0 +1,68 @@
+.calendar {
+    margin-bottom: .625rem;
+    padding: .625rem;
+    background-color: $white-background-color;
+    border-bottom: 1px solid $border-color;
+    .month {
+        padding-bottom: .625rem;
+        .item {
+            float: left;
+            width: 25%;
+            color: $gray-text-color;
+        }
+        .selected {
+            border-bottom: 2px solid $blue;
+            color: $black-text-color;
+            .price {
+                color: $orange;
+            }
+        }
+        
+    }
+    .week {
+        color: $gray-text-color;
+        padding-bottom: .625rem;
+        .title {
+            float: left;
+            width: calc((100%)/7);
+        }
+    }
+    .day {
+        .item {
+            float: left;
+            width: calc((100%)/7);
+            height: 3.375rem;
+        }
+        .num {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin:  0 auto;
+            font: 1rem normal;
+            border-radius: 50%;
+        }
+        .selected {
+            background-color: $blue;
+            color: $white-color;
+        }
+        .expired {
+            color: $lightGray;
+        }
+        .price {
+            color: $orange;
+            font: .625rem normal;
+        }
+        .ticket {
+            color: $blue;
+            font: .625rem normal;
+        }
+       
+    }
+    .month::after, .week::after, .day::after {
+        content: '';
+        display: block;
+        font-size: 0;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+    }
+}

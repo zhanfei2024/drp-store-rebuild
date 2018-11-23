@@ -1,0 +1,155 @@
+.order-info-page {
+    background-color: $light-background-color;
+    .head-bg {
+        padding: .625rem;
+        background: $blue;
+        margin-bottom: 1rem;
+        .title-wrapper {
+            position: relative;
+            .iconfont {
+                position: absolute;
+                display: none;
+                right: 4px;
+                bottom: .2rem;
+                width: 1rem;
+                background: $blue;
+                color: $white-color;
+            }
+        }
+        .title {
+            // margin: .625rem 0;
+            font: 1rem bold;
+            text-align: left;
+            color: $white-text-color;
+        }
+        .titleLong {
+            .title {
+                @include clampText(2);
+                height: 3rem;
+            }
+            .iconfont  {
+                display: block;
+            }
+        }
+        .titleMore {
+             @include clampText(5)
+        }
+        .add {
+            padding: .625rem 0;
+            display: flex;
+            justify-content: space-between;
+            font: .875rem normal;
+            color: $white-text-color;
+        }
+    }
+    .textarea {
+        width: 100%;
+        height: 6.875rem;
+        color: $gray-text-color;
+        font-size: .875rem;
+        line-height: 1.4rem;
+    }
+    .choice-seller {
+        margin-bottom: 3.4rem;
+    }
+    .add-tourist {
+        .add-button {
+            margin: .625rem auto;
+            width: 7.6rem;
+            height: 2.1rem;
+            background-color: $blue;
+            color: $white-color;
+            font: 1rem bold;
+            line-height: 2.1rem;
+            border-radius: 0.2rem;
+        }
+        .notice {
+            margin-bottom: .625rem;
+            font: .875rem normal;
+            color: $gray-text-color;
+        }
+    }
+    .confirm {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        line-height: 3rem;
+        border-top: 1px solid $border-color;
+        .price {
+            color: $orange;
+            width: 60%;
+            float: left;
+            background-color: $white-background-color;
+        }
+        .sum-title {
+            font: 1rem bold;
+        }
+        .tag {
+            font: 1rem bold;
+        }
+        .sum-price {
+            font: 1.2rem bold;
+        }
+        .detail {
+            color: $black-text-color;
+            font: 1rem bold;
+        }
+        .button {
+            float: left;
+            width: 40%;
+            height: 3rem;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: $blue;
+            border: 1px solid $blue;
+            color: $white-color;
+            line-height: 3rem;
+            a {
+                color: $white-color;
+            }
+            button {
+                text-align: center;
+            }
+        }
+        .button-text {
+            line-height: 3rem;
+            color: $white-color;
+            font-size: 1rem;
+        }
+    }
+    .has-confirm {
+        padding: .625rem;
+        display: flex;
+        .icon {
+            width: 16%;
+            border-right: 1px solid $border-color;
+        }
+        .iconfont {
+            font-size: 1.8rem;
+            color: $orange;
+            line-height: 42px;
+        }
+        .text {
+            padding-left: 1.56rem;
+        }
+        .title {
+            text-align: left;
+            font: 1rem bold;
+            color: $orange;
+        }
+        .info {
+            text-align: left;
+            font: .875rem normal;
+            color: $lightGray;
+        }
+    }
+    .marginBottom {
+        margin-bottom: 3.4rem
+    }
+    .need {
+        color: $red;
+    }
+}
+.scroll {
+    overflow: hidden;
+}

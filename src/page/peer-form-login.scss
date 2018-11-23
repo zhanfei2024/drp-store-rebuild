@@ -1,0 +1,68 @@
+.peer-form-login-page {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    .page-bg {
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -999;
+    }
+    .avatar {
+        padding-top: 6.5rem;
+        padding-bottom: 1.8rem;
+        .pic {
+            width: 9.4rem;
+            height: 9.4rem;
+            border-radius: 4.7rem;
+            @include boxshadow();
+        }
+    }
+    .point, .pass-word, .submit {
+        margin: 0 auto;
+        width: 19rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        line-height: 2.5rem;
+        background-color: rgba(255, 255, 255, .7);
+        // opacity: 0.1;
+        color: $body-text-color;
+        border-radius: .3rem;
+        box-sizing: border-box;
+    }
+    .point {
+        height: auto;
+        margin-bottom: 3.5rem;
+    }
+    .pass-word {
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        display: table;
+        .label, input, .right {
+            display: table-cell;
+        }
+        .label {
+            width: 10%;
+        }
+        input {
+            padding: 0 1rem;
+            display: block;
+            width: 80%;
+            height: 2.5rem;
+            font-size: 1rem;
+            line-height: 2.5rem;
+            background-color: transparent;
+        }
+        .right {
+            width: 20%;
+            vertical-align: middle;
+        }
+    }
+    .submit {
+        background-color: $white-color;
+    }
+
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- 视图窗口，移动端特属的标签。 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- html5页面调用手机打电话功能 -->
+    <meta name="format-detection" content="telephone=yes"/>
+    <title></title>
+
+    <!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+ 
+    <!-- 七牛 -->
+    <script src="//cdn.bootcss.com/plupload/2.1.9/plupload.full.min.js"></script>
+    <script src="/v/static/js/plupload.js"></script>
+    <script src="//cdn.bootcss.com/qiniu-js/1.0.17.1/qiniu.min.js"></script>
+    <script src="/v/static/js/qiniu.min.js"></script>
+
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      // 判断是否是微信浏览器
+      function isWeiXin() {
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      function DateFmt (date, fmt, fc) { //fc 进行加减操作，类似 M+1
+        if (!date) return "";
+        if (!fmt) fmt = "yyyy-MM-dd";
+        if (toString.call(date) != "[object Date]") {
+          if (toString.call(date) == "[object String]") {
+            var arr = date.split(/[- :]/),
+              date = new Date(arr[0] || "", (arr[1] - 1) || "", arr[2] || "", arr[3] || "", arr[4] || "", arr[5] || "");
+            if (date == "Invalid Date") {
+              return date;
+            }
+          } else {
+            return date;
+          }
+        }
+        //进行日期计算
+        if (fc) {
+          var dateNums = ["y", "M", "d", "h", "m", "s"];
+          var dateGets = ["getFullYear", "getMonth", "getDate", "getHours", "getMinutes", "getSeconds"];
+          var dateSets = ["setFullYear", "setMonth", "setDate", "setHours", "setMinutes", "setSeconds"];
+          dateNums.forEach(function (v, i) {
+            var tfc = fc.match(new RegExp(v + "[-+]+[0-9]*"))
+            if (!tfc) return;
+            tfc = tfc[0];
+            var n = tfc.slice(tfc.indexOf(v) + 1, tfc.length);
+            if (Number(n)) {
+              date[dateSets[i]](date[dateGets[i]]() + Number(n));
+            }
+          })
+        }
+        var o = {
+          "M+": date.getMonth() + 1, //月份
+          "d+": date.getDate(), //日
+          "h+": date.getHours(), //小时
+          "m+": date.getMinutes(), //分
+          "s+": date.getSeconds(), //秒
+          "S": date.getMilliseconds() //毫秒
+        };
+
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+          if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+      }
+    </script>
+  </body>
+</html>

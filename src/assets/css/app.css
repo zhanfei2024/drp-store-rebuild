@@ -1,0 +1,332 @@
+
+*{ padding: 0; margin: 0;}
+html,body{ height: 100%; min-height: 100%; width: 100%;}
+a{ text-decoration: none; color: #2f79c6;}
+ul{ list-style: none;}
+
+#app {
+  position: relative;
+  font-family: 'Microsoft YaHei', 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 768px;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 14px;
+  -webkit-overflow-scrolling: touch;
+}
+/* for Chrome */
+.home-page::-webkit-scrollbar {
+    display: none;
+}
+iframe{ display: none; opacity: 0; visibility: hidden;}
+
+.mint-toast{ z-index: 99999;}
+input:disabled{ background: none;}
+
+.fl{ float: left;}
+.fr{ float: right;}
+.clearfix{ zoom: 1;}
+.clearfix:after{ content: ""; display: block; clear: both;}
+
+
+.form-tab{ height: 40px; padding: 50px 0 20px;}
+.form-tab li{ float: left; width: 50%; line-height: 40px;}
+.form-tab li a{ font-size: 18px;}
+.form-tab li a.router-link-exact-active{ padding: 0 30px; border-bottom: 2px solid #2f79c6;}
+
+.mint-cell-wrapper{ background-origin: border-box;}
+.icon-eye{ display: block; width: 16px; height: 16px; margin-left: 15px; background-repeat: no-repeat; background-position: center;}
+.icon-eye.iconzheng{ background-image: url(../../assets/images/icon_eye1.png);}
+.icon-eye.iconbi{ background-image: url(../../assets/images/icon_eye2.png);}
+
+.head-address-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: white;
+  font-size: 15px;
+  width:100%;
+  border-bottom: 1px solid #eaeaea;
+}
+.head-address-ul li {
+  width: 25%;
+  display: block;
+  float: left;
+  height: 40px;
+  position: relative;
+  line-height: 45px;
+  text-align: center;
+}
+.head-address-li {
+  color: #55acee;
+}
+.address-content {
+  -webkit-transform: translate(0,0) translateZ(0);
+  height: 100%;
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 300ms;
+  -webkit-transition-timing-function: cubic-bezier(0.1,0.57,0.1,1);
+  overflow: hidden;
+}
+.address-ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-size: 15px;
+  color: #232326;
+}
+.address-ul li{
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px 0 25px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+.head-address-li:after {
+  width: 60%;
+  height: 1px;
+  border-bottom: 2px solid #55acee;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  content: '';
+  margin-left: -30%;
+}
+.address-ul li:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  border-bottom: 1px solid #e3e5e9;
+  left: 0;
+  bottom: 0;
+  transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+}
+
+.img-code{
+  width: 94px;
+  height: 33px;
+}
+
+
+.mint-cell-wrapper {
+    padding: 0;
+    border-bottom: 1px solid #c8c8cb;
+}
+.mint-cell-wrapper .mint-field-core{
+    text-align: left;
+}
+.no-bottom-border .mint-cell-wrapper {
+    padding: 0;
+    border-bottom: 1px solid transparent;
+}
+
+.custom-cell-title-full .mint-cell-title {
+    width: 100%;
+}
+
+
+
+.id-form .margin-bottom-40 {
+  margin-bottom: 3rem;
+}
+.passPort-form .margin-bottom-40 {
+  margin-bottom: 3rem;
+}
+
+/*order-mark*/
+  .mint-field-core {
+    padding: 0 10px;
+    font-size: 14px;
+    /* border: 1px solid #999 !important; */
+  }
+
+.button-wrapper {
+  margin-bottom: .625rem;
+}
+.button-wrapper > .mint-button {
+    margin: 0 .625rem;
+    width: calc(100% - 1.25rem);
+}
+
+.mint-cell {
+    margin: 0;
+    min-height: 2.4rem;
+}
+
+    .mint-cell-title, .mint-cell-title{
+        width: 105px;
+        text-align: left;
+        font-size: .875rem;
+        flex: none;
+
+    }
+    .custom-width .mint-cell-title {
+        width: 100%;
+    }
+   .mint-cell-title  .mint-cell-label {
+        font-size: 14px;
+        color: rgb(44, 62, 80)
+
+    }
+    .mint-field-core {
+        padding: 0;
+    }
+
+
+  /* tourist-edit */
+  .sex-popup {
+    width: 100%;
+  }
+
+  /* 加载样式 */
+.mint-spinner-fading-circle {
+  margin: 0 auto;
+}
+
+/* .mint-field-core {
+  padding: 0 10px;
+  font-size: 14px;
+  border: 1px solid #999 !important;
+} */
+.mint-popup {
+  width: 100%;
+}
+
+/* 取消表单项聚焦时产生的黄色边框, 取消textarea的拖动改变大小的功能 */
+input,button,select,textarea{ outline:none;}
+textarea{resize:none;}
+
+.mint-cell-value.is-link {
+  margin-right: 2rem;
+}
+
+.mint-cell:last-child, .mint-cell-wrapper {
+  background-image: none;
+}
+
+.mint-button{
+    font-size: 1rem;
+    text-align: center;
+}
+.mint-header-title {
+    font-size: 1rem;
+}
+.mint-header .is-left .mint-button {
+    text-align: left
+}
+.mint-header .is-right .mint-button  {
+    text-align: right
+}
+
+
+button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    margin: 0em;
+    font-size: .875rem;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    color: #2c3e50;
+}
+input, textarea, select {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font-size: .875rem;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    color: #2c3e50;
+}
+
+/* input样式还原 */
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+    border: none;
+}
+
+/* textarea样式还原 */
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: none;
+    padding: 2px;
+}
+
+/* button样式还原 */
+button {
+    width: 100%;
+    align-items: flex-start;
+    cursor: default;
+    color: inherit;
+    background-color: inherit;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border: none;
+}
+
+
+
+/* 去除圆角 */
+input.search-input { -webkit-appearance: none; }
+
+/* 隐藏取消按钮 */
+input.search-input::-webkit-search-cancel-button {display: none }
+
+
+
+/* input[type=search]::-webkit-search-cancel-button:after{
+    position: absolute;
+    content: 'x';
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    color: #8e8e93;
+}
+
+input[type="search"]{
+    -webkit-appearance : none !important;
+    border-radius: 0 15px 15px 0 !important;
+}  */
+
+.swiper-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.swiper-wrapper .text {
+    display: block;
+    width: 100%;
+}
